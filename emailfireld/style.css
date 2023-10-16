@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  display: flex;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding: 0 16px;
+}
+.button{
+  width: 450px;
+  box-shadow: 0 14px 28px rgba(0,0,0,.1),
+              0 10px 10px rgba(0,0,0,.2);
+}
+.button button{
+  outline: none;
+  width: 100%;
+  background: #2573a7;
+  padding: 15px 16px;
+  border: 1px solid #206592;
+  color: white;
+  font-size: 28px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form{
+  display: flex;
+  flex-flow: row nowrap;
+  background: #1c567d;
+  padding: 20px;
+  border-radius: 5px;
+}
+form input {
+  padding: 12px;
+  border-radius: 3px;
+}
+form input[type="email"]{
+  flex: 1;
+  outline: none;
+  font-size: 18px;
+  border-radius: 3px;
+  transition: .4s;
+  border: 1px solid transparent;
+}
+input[type="email"]:focus{
+  border: 1px solid #206592;
+}
+form input[type="submit"] {
+  color: white;
+  outline: none;
+  font-size: 17px;
+  padding: 0 15px;
+  cursor: pointer;
+  margin: 0 0 0 20px;
+  transition: all .5s;
+  border: 1px solid #1c567d;
+  background: linear-gradient(#2980b9,#206592);
+}
+form input[type="submit"]:hover{
+  background: linear-gradient(#2e90d1,#206592);
+}
+@media (max-width: 600px) {
+  form {
+    flex-flow: row wrap;
+    padding: 16px;
+  }
+  form input {
+    padding: 14px !important;
+    margin: 0 !important;
+    flex: 100%;
+  }
+  form input[type="submit"] {
+    margin-top: 14px !important;
+    font-size: 20px;
+  }
+}
+form.hide{
+  display: none;
+}
